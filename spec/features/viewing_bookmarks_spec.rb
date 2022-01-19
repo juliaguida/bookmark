@@ -1,18 +1,16 @@
-#feature 'visiting the homepage' do
-    #scenario 'the page title is visible' do
-     # visit '/'
+feature 'Viewing bookmarks' do
+  scenario 'visiting the index page' do
+    visit('/')
 
-      #expect(page).to have_content 'Bookmark Manager'
-   # end
-  #end
+    expect(page).to have_content 'Bookmark Manager'
+  end
 
-feature 'View bookmarks' do 
-  scenario 'view my bookmarks' do
-    visit '/bookmarks'
+  scenario 'user can see bookmarks' do
+    visit('/bookmarks')
 
-    expect(page).to have_content "https://www.google.com/"
-    expect(page).to have_content "https://www.youtube.com/"
-    expect(page).to have_content "https://www.gmail.com/"
+    expect(page).to have_content "http://www.makersacademy.com"
+    expect(page).to have_content "http://www.destroyallsoftware.com"
+    expect(page).to have_content "http://www.google.com"
   end 
 end  
 
